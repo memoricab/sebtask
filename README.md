@@ -3,7 +3,8 @@
 * Is also a spring boot application but treats as a proxy.
 * Uses netflix zuul library.
 * Routes `/country/{country}/{word}` requests to related  country micro-service.
-* Manipulates some responses from micro-services.
+* Manipulates responses of microservices  as key of response json from  `translation` to `data`.
+* Manipulates response of Estonia microservice as capitalizing the first letter of translation. 
 
 ### Estonia Micro-Service
 * Listens port 8081
