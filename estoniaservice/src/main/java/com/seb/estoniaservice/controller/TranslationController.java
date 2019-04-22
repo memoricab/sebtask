@@ -28,7 +28,7 @@ public class TranslationController implements ErrorController {
     public TranslationPojo translateWord(HttpServletRequest request, HttpServletResponse response, @PathVariable(name = "word") String word) {
         logger.info(request.getMethod() + " request to " + request.getRequestURL());
         logger.info("Path variable name word is: " + word);
-        response.addHeader(SERVICE_HEADER, SERVICE_HEADER_VALUE); // Adding this header in order to uppercase in pelican app.
+        response.addHeader(SERVICE_HEADER, SERVICE_HEADER_VALUE); // Adding this header in order to identify service and manipulate first letter of translation in pelican app.
         return EstonianTranslation.getTranslation();
 
     }
